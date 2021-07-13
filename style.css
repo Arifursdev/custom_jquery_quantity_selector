@@ -1,0 +1,47 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+/*  */
+
+[data-quantity-selector] {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+}
+
+[data-quantity-selector] [data-quantity-value] {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  text-align: center;
+  padding: 10px;
+}
+
+[data-quantity-selector] button {
+  width: 40px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0px;
+  background: #fff;
+  cursor: pointer;
+}
+
+[data-quantity-selector] button[data-quantity-up] {
+  left: auto;
+  right: 0;
+  border-left: 1px solid #ddd;
+}
+
+[data-quantity-selector] button[data-quantity-down] {
+  border-right: 1px solid #ddd;
+}
