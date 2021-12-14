@@ -18,7 +18,8 @@
 				value = isNaN(value) ? 0 : value;
 				value++;
 				if (spinnerMax >= value) {
-					spinner.attr('value', value).val(value);
+					spinner.attr('value', value).val(value).trigger('change');
+					self.trigger('quantity:change', [value]);
 				}
 		});
 		down.off().on('click', function(e) {
@@ -28,7 +29,8 @@
 			if (value !== 0) {
 				value--;
 				if (spinnerMin <= value) {
-					spinner.attr('value', value).val(value);
+					spinner.attr('value', value).val(value).trigger('change');
+					self.trigger('quantity:change', [value]);
 				}
 			}
 		});
